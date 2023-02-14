@@ -1,2 +1,2 @@
 #!/bin/bash
-IFS=':' read -ra dirs <<< "$PATH"; echo "There are ${#dirs[@]} directories in the PATH."
+echo $(('echo $PATH | grep -o ":/" | wc -1'+ 1))
